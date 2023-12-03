@@ -40,6 +40,9 @@ group :development, :test do
 
   gem "rspec"
   gem "rspec-rails"
+
+  gem "standard"
+  gem "standard-rails"
 end
 
 group :development do
