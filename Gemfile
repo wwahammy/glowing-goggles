@@ -43,6 +43,7 @@ group :development, :test do
 
   gem "standard"
   gem "standard-rails"
+  gem "standard-rspec"
 end
 
 group :development do
