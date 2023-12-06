@@ -17,6 +17,8 @@ gem "puma", ">= 5.0"
 # Use shakapacker
 gem "shakapacker", "= 7.1"
 
+gem "react_on_rails", "= 13.4"
+
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 
@@ -59,5 +61,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-

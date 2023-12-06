@@ -75,6 +75,8 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.4)
@@ -93,6 +95,7 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
+    execjs (2.9.1)
     factory_bot (6.4.2)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.2)
@@ -145,6 +148,7 @@ GEM
       racc
     psych (5.1.1.1)
       stringio
+    public_suffix (5.0.4)
     puma (6.4.0)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -191,6 +195,12 @@ GEM
     rake (13.1.0)
     rdoc (6.6.0)
       psych (>= 4.0.0)
+    react_on_rails (13.4.0)
+      addressable
+      connection_pool
+      execjs (~> 2.5)
+      rails (>= 5.2)
+      rainbow (~> 3.0)
     regexp_parser (2.8.2)
     reline (0.4.1)
       io-console (~> 0.5)
@@ -307,6 +317,7 @@ DEPENDENCIES
   jsbundling-rails
   puma (>= 5.0)
   rails (~> 7.1.2)
+  react_on_rails (= 13.4)
   rspec
   rspec-rails
   shakapacker (= 7.1)
