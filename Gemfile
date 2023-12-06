@@ -19,9 +19,6 @@ gem "shakapacker", "= 7.1"
 
 gem "react_on_rails", "= 13.4"
 
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails"
-
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 

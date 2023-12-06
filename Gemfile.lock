@@ -112,8 +112,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jsbundling-rails (1.2.1)
-      railties (>= 6.0.0)
     json (2.7.0)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
@@ -314,7 +312,6 @@ DEPENDENCIES
   debug
   factory_bot_rails
   jbuilder
-  jsbundling-rails
   puma (>= 5.0)
   rails (~> 7.1.2)
   react_on_rails (= 13.4)
