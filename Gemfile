@@ -37,6 +37,9 @@ gem "bootsnap", require: false
 # official stripe integration
 gem "stripe"
 
+# stripe webhook event handling
+gem "stripe_event"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
