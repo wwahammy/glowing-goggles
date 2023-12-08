@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 //import style from './HelloWorld.module.css';
 
-const HelloWorld = (props: { name: string; }) => {
+const HelloWorld = (props: { name: string }) => {
   const [name, setName] = useState(props.name);
 
   return (
@@ -11,7 +11,12 @@ const HelloWorld = (props: { name: string; }) => {
       <form>
         <label htmlFor="name">
           Say hello to:
-          <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
       </form>
     </div>

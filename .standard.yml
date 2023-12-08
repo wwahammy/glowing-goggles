@@ -1,6 +1,6 @@
-ignore:                 # default: []
-  - 'vendor/**/*'
+ignore: # default: []
+  - "vendor/**/*"
 
-plugins:                # default: []
+plugins: # default: []
   - standard-rails
   - standard-rspec

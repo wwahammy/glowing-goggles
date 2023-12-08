@@ -1,10 +1,10 @@
-// The source code including full typescript support is available at: 
+// The source code including full typescript support is available at:
 // https://github.com/shakacode/react_on_rails_demo_ssr_hmr/blob/master/config/webpack/serverWebpackConfig.js
 
-const { merge, config } = require('shakapacker');
-const commonWebpackConfig = require('./commonWebpackConfig');
+const { merge, config } = require("shakapacker");
+const commonWebpackConfig = require("./commonWebpackConfig");
 
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 const configureServer = () => {
   // We need to use "merge" because the clientConfigObject, EVEN after running
@@ -15,10 +15,10 @@ const configureServer = () => {
 
   // We just want the single server bundle entry
   const serverEntry = {
-    'server-bundle': serverWebpackConfig.entry['server-bundle'],
+    "server-bundle": serverWebpackConfig.entry["server-bundle"],
   };
 
-  if (!serverEntry['server-bundle']) {
+  if (!serverEntry["server-bundle"]) {
     throw new Error(
       "Create a pack with the file name 'server-bundle.js' containing all the server rendering files",
     );
@@ -32,7 +32,8 @@ const configureServer = () => {
   serverWebpackConfig.module.rules.forEach((loader) => {
     if (loader.use && loader.use.filter) {
       loader.use = loader.use.filter(
-        (item) => !(typeof item === 'string' && item.match(/mini-css-extract-plugin/)),
+        (item) =>
+          !(typeof item === "string" && item.match(/mini-css-extract-plugin/)),
       );
     }
   });
@@ -41,13 +42,15 @@ const configureServer = () => {
   serverWebpackConfig.optimization = {
     minimize: false,
   };
-  serverWebpackConfig.plugins.unshift(new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }));
+  serverWebpackConfig.plugins.unshift(
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+  );
 
   // Custom output for the server-bundle that matches the config in
   // config/initializers/react_on_rails.rb
   serverWebpackConfig.output = {
-    filename: 'server-bundle.js',
-    globalObject: 'this',
+    filename: "server-bundle.js",
+    globalObject: "this",
     // If using the React on Rails Pro node server renderer, uncomment the next line
     // libraryTarget: 'commonjs2',
     path: config.outputPath,
@@ -59,9 +62,9 @@ const configureServer = () => {
   // And no need for the MiniCssExtractPlugin
   serverWebpackConfig.plugins = serverWebpackConfig.plugins.filter(
     (plugin) =>
-      plugin.constructor.name !== 'WebpackAssetsManifest' &&
-      plugin.constructor.name !== 'MiniCssExtractPlugin' &&
-      plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin',
+      plugin.constructor.name !== "WebpackAssetsManifest" &&
+      plugin.constructor.name !== "MiniCssExtractPlugin" &&
+      plugin.constructor.name !== "ForkTsCheckerWebpackPlugin",
   );
 
   // Configure loader rules for SSR
@@ -74,30 +77,36 @@ const configureServer = () => {
       // remove the mini-css-extract-plugin and style-loader
       rule.use = rule.use.filter((item) => {
         let testValue;
-        if (typeof item === 'string') {
+        if (typeof item === "string") {
           testValue = item;
-        } else if (typeof item.loader === 'string') {
+        } else if (typeof item.loader === "string") {
           testValue = item.loader;
         }
-        return !(testValue.match(/mini-css-extract-plugin/) || testValue === 'style-loader');
+        return !(
+          testValue.match(/mini-css-extract-plugin/) ||
+          testValue === "style-loader"
+        );
       });
       const cssLoader = rule.use.find((item) => {
         let testValue;
 
-        if (typeof item === 'string') {
+        if (typeof item === "string") {
           testValue = item;
-        } else if (typeof item.loader === 'string') {
+        } else if (typeof item.loader === "string") {
           testValue = item.loader;
         }
 
-        return testValue.includes('css-loader');
+        return testValue.includes("css-loader");
       });
       if (cssLoader && cssLoader.options) {
         cssLoader.options.modules = { exportOnlyLocals: true };
       }
 
       // Skip writing image files during SSR by setting emitFile to false
-    } else if (rule.use && (rule.use.loader === 'url-loader' || rule.use.loader === 'file-loader')) {
+    } else if (
+      rule.use &&
+      (rule.use.loader === "url-loader" || rule.use.loader === "file-loader")
+    ) {
       rule.use.options.emitFile = false;
     }
   });
@@ -105,7 +114,7 @@ const configureServer = () => {
   // eval works well for the SSR bundle because it's the fastest and shows
   // lines in the server bundle which is good for debugging SSR
   // The default of cheap-module-source-map is slow and provides poor info.
-  serverWebpackConfig.devtool = 'eval';
+  serverWebpackConfig.devtool = "eval";
 
   // If using the default 'web', then libraries like Emotion and loadable-components
   // break with SSR. The fix is to use a node renderer and change the target.
