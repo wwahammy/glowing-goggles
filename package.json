@@ -9,6 +9,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@babel/runtime": "7",
     "@types/babel__core": "7",
+    "@types/react": "^18.2.42",
     "@types/webpack": "5",
     "babel-loader": "8",
     "babel-plugin-macros": "^3.1.0",
