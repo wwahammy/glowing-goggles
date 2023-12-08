@@ -3,6 +3,7 @@
 
 const webpackConfig = require("./webpackConfig");
 
+// eslint-disable-next-line no-unused-vars
 const testOnly = (_clientWebpackConfig, _serverWebpackConfig) => {
   // place any code here that is for test only
 };

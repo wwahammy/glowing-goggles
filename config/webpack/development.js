@@ -5,6 +5,7 @@ const { devServer, inliningCss } = require("shakapacker");
 
 const webpackConfig = require("./webpackConfig");
 
+// eslint-disable-next-line no-unused-vars
 const developmentEnvOnly = (clientWebpackConfig, _serverWebpackConfig) => {
   // plugins
   if (inliningCss) {
