@@ -1,0 +1,2 @@
+class StripePaymentIntentRecord < ApplicationRecord
+end
