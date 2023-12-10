@@ -58,6 +58,8 @@ group :development, :test do
 end
 
 group :development do
+  # annotate database field and routes
+  gem "annotate"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
