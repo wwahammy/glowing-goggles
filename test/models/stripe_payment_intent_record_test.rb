@@ -7,8 +7,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-require "rails_helper"
+require "test_helper"
 
-RSpec.describe StripePaymentIntentRecord, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+class StripePaymentIntentRecordTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

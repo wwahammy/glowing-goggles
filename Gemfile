@@ -49,12 +49,8 @@ group :development, :test do
 
   gem "factory_bot_rails"
 
-  gem "rspec"
-  gem "rspec-rails"
-
   gem "standard"
   gem "standard-rails"
-  gem "standard-rspec"
 end
 
 group :development do

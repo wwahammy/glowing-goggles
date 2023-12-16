@@ -3,4 +3,3 @@ ignore: # default: []
 
 plugins: # default: []
   - standard-rails
-  - standard-rspec
