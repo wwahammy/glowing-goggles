@@ -10,6 +10,7 @@
 require "test_helper"
 
 class StripePaymentIntentRecordTest < ActiveSupport::TestCase
+  should have_db_column(:amount).of_type(:integer)
   # test "the truth" do
   #   assert true
   # end

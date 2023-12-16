@@ -49,7 +49,7 @@ group :development, :test do
 
   gem "factory_bot_rails"
 
-  gem "shoulda-matchers"
+  gem "shoulda"
   gem "standard"
   gem "standard-rails"
 end
