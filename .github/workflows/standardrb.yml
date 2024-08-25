@@ -4,7 +4,7 @@
 # documentation.
 
 # pulled from repo
-name: "StandardRb"
+name: "Standard linting"
 
 on:
   push:
@@ -16,7 +16,7 @@ on:
     - cron: '45 13 * * 6'
 
 jobs:
-  rubocop:
+  standard_rb:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
