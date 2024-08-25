@@ -9,15 +9,15 @@ gem "rails", "~> 7.2"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 2.0"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
 # Use shakapacker
-gem "shakapacker", "= 7.1"
+gem "shakapacker", "8.0.1"
 
-gem "react_on_rails", "= 13.4"
+gem "react_on_rails", "14.0.5"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
