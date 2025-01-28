@@ -15,9 +15,9 @@ gem "sqlite3", "~> 2.5"
 gem "puma", ">= 5.0"
 
 # Use shakapacker
-gem "shakapacker", "8.0.2"
+gem "shakapacker", "8.1.0"
 
-gem "react_on_rails", "14.1.0"
+gem "react_on_rails", "14.1.1"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
