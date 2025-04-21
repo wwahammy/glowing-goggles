@@ -17,7 +17,7 @@ gem "puma", ">= 5.0"
 # Use shakapacker
 gem "shakapacker", "8.2.0"
 
-gem "react_on_rails", "14.2.0"
+gem "react_on_rails", "14.2.1"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
