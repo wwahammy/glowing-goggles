@@ -15,7 +15,7 @@ gem "sqlite3", "~> 2.6"
 gem "puma", ">= 5.0"
 
 # Use shakapacker
-gem "shakapacker", "8.2.0"
+gem "shakapacker", "8.3.0"
 
 gem "react_on_rails", "14.2.1"
 
